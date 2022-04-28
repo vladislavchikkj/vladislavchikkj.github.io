@@ -9,11 +9,11 @@ gulp.task('server', function() {
 
     browserSync({
         server: {
-            baseDir: "src"
+            baseDir: "./"
         }
     });
 
-    gulp.watch("src/*.html").on('change', browserSync.reload);
+    gulp.watch("*.html").on('change', browserSync.reload);
 });
 
 gulp.task('styles', function() {

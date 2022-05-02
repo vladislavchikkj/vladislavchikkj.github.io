@@ -1,5 +1,6 @@
 .carousel {
     padding: 81px 0;
+
     &__inner {
         position: relative;
         width: 750px;
@@ -21,5 +22,10 @@
     .slick-next {
         right: -66px;
         left: auto;  
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        border: none;
     }
 }

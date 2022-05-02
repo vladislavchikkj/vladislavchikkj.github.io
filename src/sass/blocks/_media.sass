@@ -1,4 +1,4 @@
-@media (max-width: 415px)
+@media (max-width: 420px)
     .header 
         flex-direction: column
         &__official
@@ -50,16 +50,21 @@
             margin: 0 auto
             margin-top: 95px
     .carousel 
+        width: 100%
         padding: 20px 0
         &__inner 
             position: relative
             margin: 0
-            width: 400px
+            width: 100%
             img 
                 width: 100%
             .slick-dots 
                 display: flex
                 justify-content: center
+            .slick-slide
+                width: 100%
+            .slick-slider
+                width: 100%
     .catalog
         &__tab
             width: 100px
@@ -67,6 +72,7 @@
         &__content
             justify-content: center
     .feed 
+        width: 100%
         &__item
             flex-direction: column
             img
@@ -76,12 +82,13 @@
                 height: 40px
                 position: absolute
         &__text
-            width: 350px
+            width: 300px
         &__name
             margin-left: 50px
             margin-bottom: 20px
         &__descr
-            padding-right: 40px
+            
+          
     .footer
         &__info
             width: 100%
@@ -89,7 +96,12 @@
         &__addr
             margin-bottom: 28px
     .container
-        width: 414px
+        max-width: 420px
+    .modal
+        &__close
+            top: 7px
+            right: 7px
+
 
 
 

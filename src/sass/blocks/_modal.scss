@@ -40,6 +40,16 @@
     &_height {
         min-height: 140px;
     }
+    .error {
+        color: $main-color;
+        font-size: 15px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        border: 1px solid $main-color;
+    }
+    label.error {
+        border: none;
+    }
 
 }
 

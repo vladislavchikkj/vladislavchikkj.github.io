@@ -52,6 +52,32 @@ $(document).ready(function(){
             $('.owerlay, #order').fadeIn();
         });
     });
+
+    function validateForms(form){
+        $(form).validate({
+            rules: {
+                name: 'required',
+                phone: 'required',
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: 'Пожалуйста, введите ваше имя.',
+                phone: 'Пожалуйста, введите ваш телефон.',
+                email: {
+                    required: 'Пожалуйста, введите ваш E-mail адрес.',
+                    email: 'Неправильный формат E-mail.'
+                }
+            }
+        });
+    };
+
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
+    
 });
 
 

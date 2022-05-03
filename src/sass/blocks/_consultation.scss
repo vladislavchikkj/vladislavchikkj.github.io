@@ -8,4 +8,14 @@
         line-height: 30px;
         color: #FFFFFF;
     }
+    .error {
+        color: #fff;
+        font-size: 15px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        border: 1px solid $main-color;
+    }
+    label.error {
+        border: none;
+    }
 }

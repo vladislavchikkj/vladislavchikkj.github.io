@@ -78,6 +78,45 @@ $(document).ready(function(){
     validateForms('#consultation form');
     validateForms('#order form');
     
+    $('input[name=phone]').mask("+375 (99) 999-99-99");
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+
+        if (!$(this).valid()) {
+            return;
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: 'src/mailer/smart.php',
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find('input').val('');
+            $('#consultation, #order').fadeOut();
+            $('.owervay, #thanks').fadeIn('slow');
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    // pageup
+
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else $('.pageup').fadeOut();
+    }); 
+
+
+    $("a[href^='#up']").click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    });
+
+    new WOW().init();
 });
 
 
